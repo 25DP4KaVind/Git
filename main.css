@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #E6E6E6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: #FFFFFF;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.flex-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo-img {
+    height: 45px;
+    width: auto;
+    border-radius: 4px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #444;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.main-content {
+    background-color: #FFFFFF;
+    padding: 40px;
+    min-height: 80vh;
+    border-radius: 4px;
+}
+
+.search-filter-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.search-bar {
+    flex-grow: 1; 
+    display: flex;
+    border: 1px solid #999;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.search-btn {
+    padding: 0 15px;
+    background: none;
+    border: none;
+    border-left: 1px solid #999;
+    cursor: pointer;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background: white;
+    border: 1px solid #999;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.product-card {
+    text-align: center;
+}
+
+.image-box {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+.product-card h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.old-price {
+    font-size: 12px;
+    color: #777;
+    text-decoration: line-through;
+}
+
+.discount-price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+.footer {
+    background-color: #E6E6E6;
+    padding: 40px 0;
+    color: #444;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #CCC;
+    padding-top: 20px;
+}

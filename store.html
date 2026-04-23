@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store - Custom Palette</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container flex-nav">
+            <div class="logo-section">
+                <img src="https://lastatic.ams3.cdn.digitaloceanspaces.com/2019/11/runcis-1024x653.jpg" alt="Logo" class="nav-logo-img">
+                <div class="logo">LOGO</div>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#">Shop</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <div class="search-filter-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="filter-dropdown">
+                <button class="filter-btn">FILTER <span>▼</span></button>
+            </div>
+        </div>
+
+        <div class="products-grid">
+            <script>
+                const images = [
+                    "https://www.leonardojewelers.com/upload/rolex_v7/product/landscape/upright_m126506-0001.webp", 
+                    "https://lmt-web.mstatic.lv/eshop/7735/conversions/JBL-Tune-520BT-On-Ear_black-860.webp",
+                    "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400",
+                    "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400"
+                ];
+
+                for (let i = 0; i < 16; i++) {
+                    let currentImg = images[i % images.length]; 
+                    
+                    document.write(`
+                        <div class="product-card">
+                            <div class="image-box"> 
+                                <img src="${currentImg}" alt="Produkts" class="product-img">
+                            </div>
+                            <h3>Product Name</h3>
+                            <p class="old-price">Old Price</p>
+                            <p class="discount-price">Discounted Price</p>
+                        </div>
+                    `);
+                }
+            </script>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p>Tallinas iela 4, Rīga, Latvija</p>
+                <p>+371 12345678</p>
+            </div>
+            <div class="footer-right">
+                <p>© Online Clothing Store 2026</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
